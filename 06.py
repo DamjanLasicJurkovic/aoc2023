@@ -1,5 +1,5 @@
-inp="""Time:        55     82     64     90
-Distance:   246   1441   1012   1111"""
+with open("inputs/06.txt") as f:
+    inp = f.read()
 
 times, dists = [[z.strip() for z in x.split()[1::]] for x in inp.split("\n")]
 times, dists = [[[int(y) for y in x] if i == 0 else [int("".join(x))] for i in [0, 1]] for x in [times, dists]]
